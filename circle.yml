@@ -6,9 +6,15 @@ jobs:
     steps:
       - checkout
       - run: swiftlint
+  tests:
+    steps:
+      - checkout
+      - run: swift test
+
 
 workflows:
   version: 2
   lint:
     jobs:
       - swiftlint
+      - tests
