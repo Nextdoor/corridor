@@ -1,6 +1,6 @@
 # Corridor
 
-![Swift compatibility](https://img.shields.io/badge/Swift-4.1-orange.svg)&nbsp;&nbsp;&nbsp;[![CircleCI](https://circleci.corp.nextdoor.com/gh/Nextdoor/corridor.svg?style=shield)](https://circleci.corp.nextdoor.com/gh/Nextdoor/corridor)
+![Swift compatibility](https://img.shields.io/badge/Swift-4.0-orange.svg)&nbsp;&nbsp;&nbsp;[![CircleCI](https://circleci.com/gh/Nextdoor/corridor.svg?style=shield)](https://circleci.com/gh/Nextdoor/corridor)
 
 Spend less time writing custom URL matching and parsing logic. Define any URL format you support using a single string, and let Corridor do the heavy lifting.
 
@@ -48,7 +48,7 @@ switch route {
 
 ## Overview
 
-See an [example project](https://github.com/Nextdoor/example-corridor.git) using Corridor
+See an example router that uses `Corridor` inside the `Example` folder
 
 ### Route
 
