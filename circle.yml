@@ -8,15 +8,28 @@ jobs:
       - run: swiftlint
   tests:
     macos:
-      xcode: "9.3"
+      xcode: "9.2.1"
     steps:
       - checkout
       - run: swift test
-
+  docs:
+    macos:
+      xcode: "9.2.1"
+    - run:
+          name: Docs
+          command: |
+            brew install jazzy
+            git checkout gh-pages
+            git show master:README.md > README.md
+            jazzy
+            git config --global user.email "docs@nextdoor.com"
+            git config --global user.name "Docs"
+            git add README.md docs && git commit -m "Update docs [ci skip]" && git push origin gh-pages -f
 
 workflows:
   version: 2
-  lint:
+  corridor:
     jobs:
       - swiftlint
       - tests
+      - docs
