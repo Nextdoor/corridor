@@ -1,0 +1,24 @@
+line_length: 120
+disabled_rules: # rule identifiers to exclude from running
+  - force_try
+opt_in_rules: # some rules are only opt-in
+  - vertical_whitespace
+  - conditional_returns_on_newline
+  - closure_end_indentation
+  - closure_spacing
+  - explicit_init
+  - first_where
+  - nimble_operator
+  - operator_usage_whitespace
+  - redundant_nil_coalescing
+  - prohibited_super_call
+  - overridden_super_call
+  - sorted_imports
+  - switch_case_on_newline
+  - fatal_error_message
+  - multiline_parameters
+  - number_separator
+included:
+  - Sources/
+excluded:
+  - Tests/

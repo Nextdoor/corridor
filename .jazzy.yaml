@@ -1,0 +1,15 @@
+# Ordered by output of `jazzy --help config`
+
+output: docs
+min_acl: public
+xcodebuild_arguments: [-scheme,Corridor-Package]
+clean: true
+framework_root: .
+sdk: iphonesimulator
+author: Nextdoor 
+author_url: https://nextdoor.com
+github_url: https://github.com/Nextdoor/corridor
+module: Corridor 
+skip_undocumented: false
+hide_documentation_coverage: true
+theme: fullwidth
