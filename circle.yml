@@ -15,7 +15,9 @@ jobs:
   docs:
     macos:
       xcode: "9.2.1"
-    - run:
+    steps:
+      - checkout
+      - run:
           name: Docs
           command: |
             brew install jazzy
