@@ -1,6 +1,6 @@
 # Corridor
 
-![Swift compatibility](https://img.shields.io/badge/Swift-4.0-orange.svg)&nbsp;&nbsp;&nbsp;[![CircleCI](https://circleci.com/gh/Nextdoor/corridor.svg?style=svg)](https://circleci.com/gh/Nextdoor/corridor)
+![Swift compatibility](https://img.shields.io/badge/Swift-4.0-orange.svg)&nbsp;&nbsp;&nbsp;[![CircleCI](https://circleci.com/gh/Nextdoor/corridor/tree/master.svg?style=svg)](https://circleci.com/gh/Nextdoor/corridor/tree/master)
 
 Spend less time writing custom URL matching and parsing logic. Define any URL format you support using a single string, and let Corridor do the heavy lifting.
 
