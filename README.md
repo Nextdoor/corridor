@@ -231,7 +231,7 @@ Corridor supports multiple methods for installing the library in a project.
 To integrate Corridor into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'Corridor','~> 0.0.1'
+pod 'Corridor','~> '
 ```
 
 Also include on a separate line in your `Podfile`:
@@ -245,7 +245,7 @@ use_frameworks!
 To integrate Corridor into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Nextdoor/corridor" ~> 0.0.1'
+github "Nextdoor/corridor" ~> 1.0.0'
 ```
 
 Run `carthage` to build the framework and drag the built `Corridor.framework` into your Xcode project.
@@ -256,7 +256,7 @@ To integrate Corridor into your Xcode project using Swift Package Manager, add i
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Nextdoor/corridor.git", from: "0.0.1")
+    .package(url: "https://github.com/Nextdoor/corridor.git", from: "1.0.0")
 ]
 ```
 
