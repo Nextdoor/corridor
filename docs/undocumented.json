@@ -1,40 +1,40 @@
 {
   "warnings": [
     {
-      "file": "/Users/jcompton/src/public/corridor/Sources/Corridor/CorridorRouter.swift",
+      "file": "/Users/distiller/project/Sources/Corridor/CorridorRouter.swift",
       "line": 20,
       "symbol": "GlobalQueryOptionalParamsMapping.params",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jcompton/src/public/corridor/Sources/Corridor/CorridorRouter.swift",
+      "file": "/Users/distiller/project/Sources/Corridor/CorridorRouter.swift",
       "line": 22,
       "symbol": "GlobalQueryOptionalParamsMapping.decoder",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jcompton/src/public/corridor/Sources/Corridor/CorridorRouter.swift",
+      "file": "/Users/distiller/project/Sources/Corridor/CorridorRouter.swift",
       "line": 43,
       "symbol": "RouteResponse.route",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jcompton/src/public/corridor/Sources/Corridor/CorridorRouter.swift",
+      "file": "/Users/distiller/project/Sources/Corridor/CorridorRouter.swift",
       "line": 44,
       "symbol": "RouteResponse.globalParams",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jcompton/src/public/corridor/Sources/Corridor/CorridorRouter.swift",
+      "file": "/Users/distiller/project/Sources/Corridor/CorridorRouter.swift",
       "line": 46,
       "symbol": "RouteResponse.init(route:globalParams:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/jcompton/src/public/corridor"
+  "source_directory": "/Users/distiller/project"
 }
