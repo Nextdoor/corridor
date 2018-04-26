@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  swiftlint:
+    docker:
+      - image: norionomura/swiftlint 
+    steps:
+      - checkout
+      - run: swiftlint
+
+workflows:
+  version: 2
+  lint:
+    jobs:
+      - swiftlint
