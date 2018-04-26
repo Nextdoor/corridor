@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Docs
           command: |
-            brew install jazzy
+            gem install jazzy
             git checkout gh-pages
             git show master:README.md > README.md
             jazzy
