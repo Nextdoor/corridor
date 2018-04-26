@@ -9,7 +9,7 @@ jobs:
   tests:
     build:
       macos:
-        xcode: "9.3"
+        xcode: "9.1.0"
     steps:
       - checkout
       - run: swift test
