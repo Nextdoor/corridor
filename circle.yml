@@ -8,7 +8,7 @@ jobs:
       - run: swiftlint
   tests:
     macos:
-      xcode: "9.1.0"
+      xcode: "9.3"
     steps:
       - checkout
       - run: swift test
