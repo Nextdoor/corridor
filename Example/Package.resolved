@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Corridor",
+        "repositoryURL": "git@github.com:Nextdoor/corridor.git",
+        "state": {
+          "branch": null,
+          "revision": "06e6fdab778a42e7e6efc29c8f993051454a19d7",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

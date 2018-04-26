@@ -1,0 +1,41 @@
+version: 2
+jobs:
+  swiftlint:
+    docker:
+      - image: norionomura/swiftlint 
+    steps:
+      - checkout
+      - run: swiftlint
+  tests:
+    macos:
+      xcode: "9.2.0"
+    steps:
+      - checkout
+      - run: swift test
+  docs:
+    macos:
+      xcode: "9.2.0"
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "74:2b:16:33:e7:f0:c7:70:17:9c:a3:b5:0f:11:2e:03"
+      - checkout
+      - run:
+          name: Docs
+          command: |
+            sudo gem install jazzy
+            swift package generate-xcodeproj
+            git checkout gh-pages
+            git show master:README.md > README.md
+            jazzy
+            git config --global user.email "docs@nextdoor.com"
+            git config --global user.name "Docs"
+            git add README.md docs && git commit -m "Update docs [ci skip]" && git push origin gh-pages -f
+
+workflows:
+  version: 2
+  corridor:
+    jobs:
+      - swiftlint
+      - tests
+      - docs
