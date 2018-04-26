@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Corridor  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Corridor  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Corridor Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Nextdoor/corridor">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Corridor Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Corridor  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CorridorRouter.html">CorridorRouter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CorridorTypes.html">CorridorTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CorridorTypes/TypeError.html">– TypeError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:8Corridor28corridorGlobalParamsResponsexs10DictionaryVySSypG_xmtKAA0acD0RzlF">corridorGlobalParamsResponse(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:8Corridor16corridorResponsexs10DictionaryVySSypG_xmtKAA0A5RouteRzlF">corridorResponse(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:8Corridor0A12GlobalParamsP">CorridorGlobalParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:8Corridor0A5RouteP">CorridorRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/CorridorTypeConverterProtocol.html">CorridorTypeConverterProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/CorridorTypeProtocol.html">CorridorTypeProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs.html#/s:8Corridor0A16GlobalParamsNoneV">CorridorGlobalParamsNone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GlobalQueryOptionalParamsMapping.html">GlobalQueryOptionalParamsMapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RouteResponse.html">RouteResponse</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='corridor' class='heading'>Corridor</h1>
+
+<p><img src="https://img.shields.io/badge/Swift-4.1-orange.svg" alt="Swift compatibility">&nbsp;&nbsp;&nbsp;<a href="https://circleci.corp.nextdoor.com/gh/Nextdoor/corridor"><img src="https://circleci.corp.nextdoor.com/gh/Nextdoor/corridor.svg?style=shield" alt="CircleCI"></a></p>
+
+<p>Spend less time writing custom URL matching and parsing logic. Define any URL format you support using a single string, and let Corridor do the heavy lifting.</p>
+
+<p>Suppose you want to handle a user-profile universal-link like: <code>https://example.com/user/15127128</code>.</p>
+
+<p>(1) Create a <em>route</em> &ndash; a <a href="https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types">Codable</a> struct that contains all the values you want to extract from the URL. Once the URL is matched, the userId will have a value of <code>15127128</code></p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">ViewUserProfile</span><span class="p">:</span> <span class="kt">CorridorRoute</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">Int</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>(2) Register the format: <code>&quot;/user/:userId{int}&quot;</code></p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="s">"/user/:userId{int}"</span><span class="p">,</span> <span class="p">{</span> <span class="k">try</span> <span class="nf">corridorResponse</span><span class="p">(</span><span class="nv">$0</span><span class="p">,</span> <span class="kt">ViewUserProfile</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">})</span>
+</code></pre>
+
+<p><strong>Now, for the usage:</strong></p>
+
+<p>(3) Call <code>attemptMatch(_:URL)</code> with the url <code>https://example.com/user/15127128</code> to get a matched-response</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">router</span><span class="o">.</span><span class="nf">attemptMatch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</code></pre>
+
+<p>(4) Switch on the result&rsquo;s <code>route</code>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">route</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">route</span>
+<span class="k">switch</span> <span class="n">route</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="k">let</span> <span class="nv">route</span> <span class="k">as</span> <span class="kt">ViewUserProfile</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">route</span><span class="o">.</span><span class="n">userId</span><span class="p">)</span>
+  <span class="k">default</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"url not matched"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><code>15127128</code> <em>Voila!</em></p>
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#contribute">Contribute</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>See an <a href="https://github.com/Nextdoor/example-corridor.git">example project</a> using Corridor</p>
+<h3 id='route' class='heading'>Route</h3>
+
+<p>A struct that conforms to <code><a href="Protocols.html#/s:8Corridor0A5RouteP">CorridorRoute</a></code>. Its variables correspond to values contained in a URL. It&rsquo;s created when a URL is matched.</p>
+<h3 id='router' class='heading'>Router</h3>
+
+<p>Routers facilitate the process of matching a URL to a route:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">router</span> <span class="o">=</span> <span class="kt">CorridorRouter</span><span class="p">()</span>
+</code></pre>
+
+<p>Let&rsquo;s register a type of URL:</p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="s">"/user/:userId{int}"</span><span class="p">,</span> <span class="p">{</span> <span class="k">try</span> <span class="nf">corridorResponse</span><span class="p">(</span><span class="nv">$0</span><span class="p">,</span> <span class="kt">ViewUserProfile</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">})</span>
+</code></pre>
+
+<blockquote>
+<p>ViewUserProfile is the struct that we defined in the first example</p>
+</blockquote>
+
+<p><code>&quot;/user/:userId{int}&quot;</code> is the URL format. It matches URLs that start with <code>/user</code> and have an integer value after.</p>
+
+<p><code>{ try corridorResponse($0, ViewUserProfile.self) }</code> is a block that populates the route <code>ViewUserProfile</code> if the URL is matched.</p>
+<h3 id='url-format' class='heading'>URL format</h3>
+
+<p>A URL format is split into a path and a query:</p>
+
+<ul>
+<li>Path: includes all the URL values separated by <q>/</q></li>
+<li>Query: all the key-value pairs after the URL&rsquo;s last <q>/</q></li>
+</ul>
+
+<blockquote>
+<p>URL formats must start with a forward slash <q>/</q></p>
+</blockquote>
+<h4 id='formatting-the-path' class='heading'>Formatting the path</h4>
+
+<p>Suppose you want to match URLs in the form <code>/user/12891</code>, that start with <code>user</code> and end with a number.</p>
+
+<p>The URL format for this is: <code>&quot;/user/:userId{int}&quot;</code>, where the number after <code>user</code> is represented as <code>:userId{int}</code>.</p>
+
+<p>Each param you want to extract follows the form <code>:paramName{baseType}</code> or <code>:paramName</code>.</p>
+
+<ul>
+<li><code>paramName</code> is the same name as a variable in the route</li>
+<li><code>baseType</code> indicates the type of <code>paramName</code></li>
+</ul>
+
+<p>So <code>:userId</code> without an explicit base type would map to <code>let userId: String</code> in a route, while <code>:userId{int}</code> would map to <code>let userId: Int</code> in a route.</p>
+
+<blockquote>
+<p>URL definitions must start with a forward slash <q>/</q></p>
+
+<p>Base type &lsquo;string&rsquo; maps to a String</p>
+
+<p>Base type &lsquo;int&rsquo; maps to a Int</p>
+</blockquote>
+<h4 id='formatting-the-query' class='heading'>Formatting the query</h4>
+
+<p>Suppose you want to match URLs in the form <code>/user?userId=12891</code>, that begin with a <code>user</code> path, and have a numeric <code>userId</code> value in the params.</p>
+
+<p>The URL format for this is: <code>&quot;/user/?:userId{int}&quot;</code>, where everything after <code>?</code> is part of the query.</p>
+
+<p><strong>Optionals:</strong></p>
+
+<p>Now suppose that the <code>userId</code> value was optional, so <code>/user&amp;userId=12891</code> and <code>/user</code> would map to the same route.</p>
+
+<p>The URL format for this is: <code>&quot;/user/?:userId{int?}&quot;</code></p>
+
+<p><strong>Literals:</strong></p>
+
+<p>Now suppose that we wanted to match URLs in the form <code>/user&amp;userId=12891&amp;sourceType=email</code>, where the (&lsquo;sourceType&rsquo;, &lsquo;email&rsquo;) pair was present in the query.</p>
+
+<p>The URL format for this is: <code>&quot;/user/?:userId{int}&amp;:sourceType{&#39;email&#39;}&quot;</code></p>
+
+<blockquote>
+<p>URL formats must separate consecutive query params with an ampersand &lsquo;&amp;&rsquo;</p>
+</blockquote>
+<h3 id='support-custom-base-types' class='heading'>Support custom base types</h3>
+
+<p>The URL definition <code>&quot;/user/:userId{int}?:nickname{string}&quot;</code> contains built-in base types: <code>&quot;int&quot;</code>, <code>&quot;string&quot;</code>, and <code>&quot;bool&quot;</code>.
+Each base type maps to a Swift type:</p>
+
+<p><code>&quot;int&quot; -&gt; Int</code></p>
+
+<p><code>&quot;string&quot; -&gt; String</code></p>
+
+<p><code>&quot;bool&quot; -&gt; Bool</code></p>
+
+<blockquote>
+<p>Any base type can be enclosed by square brackets to represent a comma separated list of base values. Example: <code>&quot;[int]&quot; -&gt; [Int]</code>.</p>
+</blockquote>
+
+<p>What if you want to use a base type that isn&rsquo;t one of the built-in ones? Here&rsquo;s an example:</p>
+
+<p>(1) Define a base type named <q>uint</q> that converts values to UInt:</p>
+<pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">struct</span> <span class="kt">CorridorTypeUInt</span><span class="p">:</span> <span class="kt">CorridorTypeProtocol</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">"uint"</span>
+    <span class="kd">func</span> <span class="nf">convertToType</span><span class="p">(</span><span class="n">from</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kt">UInt</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<blockquote>
+<p>Base type names must be alphabetic, and cannot be identical to any of the existing built-in base type names</p>
+</blockquote>
+
+<p>(2) Instantiate <code><a href="Classes/CorridorTypes.html">CorridorTypes</a></code> with the custom base type:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">baseTypes</span> <span class="o">=</span> <span class="kt">CorridorTypes</span><span class="p">(</span><span class="nv">customTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt">CorridorTypeUInt</span><span class="p">()])</span>
+</code></pre>
+
+<p>(3) Instantiate the router with the baseTypes</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">router</span> <span class="o">=</span> <span class="kt">CorridorRouter</span><span class="p">(</span><span class="nv">corridorTypes</span><span class="p">:</span> <span class="n">baseTypes</span><span class="p">)</span>
+</code></pre>
+
+<p><strong>Now, for the usage:</strong></p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">ViewUserProfile</span><span class="p">:</span> <span class="kt">CorridorRoute</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">UInt</span>
+    <span class="k">let</span> <span class="nv">nickname</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="s">"/user/:userId{uint}?:nickname{string}"</span><span class="p">,</span> <span class="p">{</span> <span class="k">try</span> <span class="nf">corridorResponse</span><span class="p">(</span><span class="nv">$0</span><span class="p">,</span> <span class="kt">ViewUserProfile</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">})</span>
+</code></pre>
+
+<p>(4) Call <code>attemptMatch(_:URL)</code> with the url <code>www.example.com/8971/?nickname=Bob</code></p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">router</span><span class="o">.</span><span class="nf">attemptMatch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">route</span> <span class="o">=</span> <span class="n">routeResponse</span><span class="o">.</span><span class="n">route</span> <span class="k">as!</span> <span class="kt">ViewUserProfile</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">route</span><span class="o">.</span><span class="n">userId</span><span class="p">)</span>
+</code></pre>
+
+<p><code>8971</code> <em>Voila!</em></p>
+<h3 id='match-em-global-em-query-params' class='heading'>Match <em>global</em> query params</h3>
+
+<p>What if a query parameter such as a tracking id, or user id is contained in many of your URLs?</p>
+
+<p>Suppose your URLs contained a query param <code>sourceUserId</code> to track the user who clicked on the URL.</p>
+
+<p>You could include <code>let sourceUserId: String?</code> in all your routes, but doing so is tedious and error-prone. <em>CorridorGlobalParams</em> to the rescue!</p>
+
+<p>(1) Create a struct that conforms to <code><a href="Protocols.html#/s:8Corridor0A12GlobalParamsP">CorridorGlobalParams</a></code></p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">GlobalParams</span><span class="p">:</span> <span class="kt">CorridorGlobalParams</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="nv">sourceUserId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>(2) Create a mapping</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">mapping</span> <span class="o">=</span> <span class="kt">GlobalQueryOptionalParamsMapping</span><span class="p">(</span><span class="nv">params</span><span class="p">:</span> <span class="p">[</span><span class="s">"sourceUserId"</span><span class="p">],</span>
+                                                       <span class="nv">decoder</span><span class="p">:</span> <span class="p">{</span> <span class="k">try</span> <span class="nf">corridorGlobalParamsResponse</span><span class="p">(</span><span class="nv">$0</span><span class="p">,</span> <span class="kt">GlobalParams</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">})</span>
+</code></pre>
+
+<p>(3) Instantiate the router with the mapping</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">router</span> <span class="o">=</span> <span class="kt">CorridorRouter</span><span class="p">(</span><span class="nv">globalQueryOptionalParamsMapping</span><span class="p">:</span> <span class="n">mapping</span><span class="p">)</span>
+</code></pre>
+
+<p><strong>Now, for the usage:</strong></p>
+
+<p>(4) Call <code>attemptMatch(_:URL)</code> with the url <code>www.example.com/news_feed/?sourceUserId=abc123</code></p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">router</span><span class="o">.</span><span class="nf">attemptMatch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">globalParams</span> <span class="o">=</span> <span class="n">routeResponse</span><span class="o">.</span><span class="n">globalParams</span> <span class="k">as!</span> <span class="kt">GlobalParams</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">globalParams</span><span class="o">.</span><span class="n">sourceUserId</span><span class="p">)</span>
+</code></pre>
+
+<p><code>abc123</code> <em>Voila!</em></p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>Corridor supports multiple methods for installing the library in a project.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>To integrate Corridor into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Corridor'</span><span class="p">,</span><span class="s1">'~&gt; 0.0.1'</span>
+</code></pre>
+
+<p>Also include on a separate line in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p>To integrate Corridor into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "Nextdoor/corridor" ~&gt; 0.0.1'
+</code></pre>
+
+<p>Run <code>carthage</code> to build the framework and drag the built <code>Corridor.framework</code> into your Xcode project.</p>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>To integrate Corridor into your Xcode project using Swift Package Manager, add it to the <code>dependencies</code> value of your <code>Package.swift</code>:</p>
+<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Nextdoor/corridor.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.0.1"</span><span class="p">)</span>
+<span class="p">]</span>
+</code></pre>
+<h2 id='contribute' class='heading'>Contribute</h2>
+
+<ul>
+<li>If you have a feature request or discover a bug, open an issue</li>
+<li>If you&rsquo;d like to contribute changes, submit a pull request</li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Corridor is released under the Apache 2.0 license. <a href="https://github.com/Nextdoor/corridor/blob/master/LICENSE">See LICENSE</a> for details.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://nextdoor.com" target="_blank" rel="external">Nextdoor</a>. All rights reserved. (Last updated: 2018-04-26)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
