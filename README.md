@@ -231,7 +231,7 @@ Corridor supports multiple methods for installing the library in a project.
 To integrate Corridor into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'Corridor','~> '
+pod 'Corridor','~> 1.0.0'
 ```
 
 Also include on a separate line in your `Podfile`:
