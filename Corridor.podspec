@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Corridor"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Corridor lets you easily match URLs and extract their values"
 
   # This description is used to generate tags and improve search results.
@@ -63,7 +63,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "10.3"
 
-  s.swift_version = "4.0"
+  s.swift_version = "5.0"
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
   # s.osx.deployment_target = "10.7"
