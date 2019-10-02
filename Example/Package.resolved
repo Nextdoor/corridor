@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "Corridor",
-        "repositoryURL": "git@github.com:Nextdoor/corridor.git",
+        "repositoryURL": "https://github.com/Nextdoor/corridor.git",
         "state": {
           "branch": null,
-          "revision": "06e6fdab778a42e7e6efc29c8f993051454a19d7",
-          "version": "1.0.0"
+          "revision": "5e3d4970087c6978a37d07af3fcf9f06a721ca0a",
+          "version": "1.0.2"
         }
       }
     ]
