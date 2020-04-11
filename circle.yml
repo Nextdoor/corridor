@@ -8,13 +8,13 @@ jobs:
       - run: swiftlint
   tests:
     macos:
-      xcode: "9.2.0"
+      xcode: "11.3.1"
     steps:
       - checkout
       - run: swift test
   docs:
     macos:
-      xcode: "9.2.0"
+      xcode: "11.3.1"
     steps:
       - add_ssh_keys:
           fingerprints:
