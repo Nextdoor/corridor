@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"Corridor::CorridorPackageTests::ProductTarget" /* CorridorPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_49 /* Build configuration list for PBXAggregateTarget "CorridorPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_52 /* PBXTargetDependency */,
+			);
+			name = CorridorPackageTests;
+			productName = CorridorPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_36 /* CorridorCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CorridorCompiler.swift */; };
+		OBJ_37 /* CorridorMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CorridorMatcher.swift */; };
+		OBJ_38 /* CorridorRegexUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CorridorRegexUtils.swift */; };
+		OBJ_39 /* CorridorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CorridorRouter.swift */; };
+		OBJ_40 /* CorridorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CorridorTypes.swift */; };
+		OBJ_47 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_58 /* CorridorCompilerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CorridorCompilerTest.swift */; };
+		OBJ_59 /* CorridorMatcherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* CorridorMatcherTest.swift */; };
+		OBJ_60 /* CorridorRegexUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* CorridorRegexUtilsTest.swift */; };
+		OBJ_61 /* CorridorRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* CorridorRouterTest.swift */; };
+		OBJ_62 /* CorridorTypesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* CorridorTypesTest.swift */; };
+		OBJ_63 /* CorridorMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* CorridorMocks.swift */; };
+		OBJ_65 /* Corridor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Corridor::Corridor::Product" /* Corridor.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF4931BC26D804E400FD3662 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Corridor::Corridor";
+			remoteInfo = Corridor;
+		};
+		BF4931BD26D804E500FD3662 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Corridor::CorridorTests";
+			remoteInfo = CorridorTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"Corridor::Corridor::Product" /* Corridor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Corridor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Corridor::CorridorTests::Product" /* CorridorTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CorridorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* CorridorMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorMatcher.swift; sourceTree = "<group>"; };
+		OBJ_11 /* CorridorRegexUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorRegexUtils.swift; sourceTree = "<group>"; };
+		OBJ_12 /* CorridorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorRouter.swift; sourceTree = "<group>"; };
+		OBJ_13 /* CorridorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorTypes.swift; sourceTree = "<group>"; };
+		OBJ_16 /* CorridorCompilerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorCompilerTest.swift; sourceTree = "<group>"; };
+		OBJ_17 /* CorridorMatcherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorMatcherTest.swift; sourceTree = "<group>"; };
+		OBJ_18 /* CorridorRegexUtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorRegexUtilsTest.swift; sourceTree = "<group>"; };
+		OBJ_19 /* CorridorRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorRouterTest.swift; sourceTree = "<group>"; };
+		OBJ_20 /* CorridorTypesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorTypesTest.swift; sourceTree = "<group>"; };
+		OBJ_22 /* CorridorMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorMocks.swift; sourceTree = "<group>"; };
+		OBJ_26 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = SOURCE_ROOT; };
+		OBJ_27 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_28 /* Corridor.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Corridor.podspec; sourceTree = "<group>"; };
+		OBJ_29 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_30 /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = circle.yml; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* CorridorCompiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorCompiler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_65 /* Corridor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_14 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* CorridorTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_15 /* CorridorTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* CorridorCompilerTest.swift */,
+				OBJ_17 /* CorridorMatcherTest.swift */,
+				OBJ_18 /* CorridorRegexUtilsTest.swift */,
+				OBJ_19 /* CorridorRouterTest.swift */,
+				OBJ_20 /* CorridorTypesTest.swift */,
+				OBJ_21 /* Mocks */,
+			);
+			name = CorridorTests;
+			path = Tests/CorridorTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_21 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* CorridorMocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Corridor::Corridor::Product" /* Corridor.framework */,
+				"Corridor::CorridorTests::Product" /* CorridorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_14 /* Tests */,
+				OBJ_23 /* Products */,
+				OBJ_26 /* scripts */,
+				OBJ_27 /* LICENSE */,
+				OBJ_28 /* Corridor.podspec */,
+				OBJ_29 /* README.md */,
+				OBJ_30 /* circle.yml */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Corridor */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* Corridor */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* CorridorCompiler.swift */,
+				OBJ_10 /* CorridorMatcher.swift */,
+				OBJ_11 /* CorridorRegexUtils.swift */,
+				OBJ_12 /* CorridorRouter.swift */,
+				OBJ_13 /* CorridorTypes.swift */,
+			);
+			name = Corridor;
+			path = Sources/Corridor;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Corridor::Corridor" /* Corridor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "Corridor" */;
+			buildPhases = (
+				OBJ_35 /* Sources */,
+				OBJ_41 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Corridor;
+			productName = Corridor;
+			productReference = "Corridor::Corridor::Product" /* Corridor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Corridor::CorridorTests" /* CorridorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_54 /* Build configuration list for PBXNativeTarget "CorridorTests" */;
+			buildPhases = (
+				OBJ_57 /* Sources */,
+				OBJ_64 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_66 /* PBXTargetDependency */,
+			);
+			name = CorridorTests;
+			productName = CorridorTests;
+			productReference = "Corridor::CorridorTests::Product" /* CorridorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Corridor::SwiftPMPackageDescription" /* CorridorPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_43 /* Build configuration list for PBXNativeTarget "CorridorPackageDescription" */;
+			buildPhases = (
+				OBJ_46 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CorridorPackageDescription;
+			productName = CorridorPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Corridor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Corridor::Corridor" /* Corridor */,
+				"Corridor::SwiftPMPackageDescription" /* CorridorPackageDescription */,
+				"Corridor::CorridorPackageTests::ProductTarget" /* CorridorPackageTests */,
+				"Corridor::CorridorTests" /* CorridorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_36 /* CorridorCompiler.swift in Sources */,
+				OBJ_37 /* CorridorMatcher.swift in Sources */,
+				OBJ_38 /* CorridorRegexUtils.swift in Sources */,
+				OBJ_39 /* CorridorRouter.swift in Sources */,
+				OBJ_40 /* CorridorTypes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_47 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_58 /* CorridorCompilerTest.swift in Sources */,
+				OBJ_59 /* CorridorMatcherTest.swift in Sources */,
+				OBJ_60 /* CorridorRegexUtilsTest.swift in Sources */,
+				OBJ_61 /* CorridorRouterTest.swift in Sources */,
+				OBJ_62 /* CorridorTypesTest.swift in Sources */,
+				OBJ_63 /* CorridorMocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Corridor::CorridorTests" /* CorridorTests */;
+			targetProxy = BF4931BD26D804E500FD3662 /* PBXContainerItemProxy */;
+		};
+		OBJ_66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Corridor::Corridor" /* Corridor */;
+			targetProxy = BF4931BC26D804E400FD3662 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Corridor.xcodeproj/Corridor_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Corridor;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Corridor;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Corridor.xcodeproj/Corridor_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Corridor;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Corridor;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.0.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.0.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Corridor.xcodeproj/CorridorTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CorridorTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		OBJ_56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Corridor.xcodeproj/CorridorTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CorridorTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "Corridor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_32 /* Build configuration list for PBXNativeTarget "Corridor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_33 /* Debug */,
+				OBJ_34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_43 /* Build configuration list for PBXNativeTarget "CorridorPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_44 /* Debug */,
+				OBJ_45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_49 /* Build configuration list for PBXAggregateTarget "CorridorPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_50 /* Debug */,
+				OBJ_51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_54 /* Build configuration list for PBXNativeTarget "CorridorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_55 /* Debug */,
+				OBJ_56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
